@@ -1,15 +1,16 @@
-Add Auto Translate with Google Translate api
+Add Auto Translate with Google Translate api ["0%]
 
-Add installer file  ["OK"]
+Add installer file  ["90%"]
 
-Add main.py
+Add main.py        ["20%"]
 
-Bug fix
+Bug fix  ["?"]
 
-add other cool stuff 
+add other cool stuff  ["?"]
 
 
 
 31/10/2020
 
-Add log event to main
+Add log event to main  [OK]
+

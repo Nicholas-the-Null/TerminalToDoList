@@ -89,12 +89,12 @@ def auto_elimina_progetti_vuoti():
     if number_element == 0 and logga=="":
         logga="non ci sono elementi da eliminare"
     if logga=="" and number_element!=0:
+        
         logga="eliminati con successo tutti i "+str(number_element)  
     else:
         logga="error "+str(len(elementi)-number_element) + " file non eliminati"
 
     return logga
-
 
                     
 def Elimina_File_Duplicate():
@@ -140,6 +140,7 @@ def Elimina_File_Duplicate():
         else:
 
             logga="error "+str(totale-number_element)+ " possibili file non sono stati eliminati"
+            
     else: 
         logga="nessun file eliminato operazione annulata"
     return logga

@@ -2,7 +2,7 @@ import datetime as dt
 import os
 
 def tabella(file):
-    """print all line off file!"""
+    """Print all line off file!"""
     ida=1
     os.system("cls")
     x=open(file,"r")
@@ -21,7 +21,7 @@ def tabella(file):
 
 
 def Return_id(file) -> int:
-    """return number of id!"""
+    """Return number of id!"""
     ida=0
     x=open(file,"r")
     y=x.readlines()

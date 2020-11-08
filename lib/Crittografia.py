@@ -68,16 +68,11 @@ def decrypt(key,filename=None,):
         messagebox.showerror("error","errore nella funzione di base del decrypt errore= " + e +" ci scusiamo")
         root.destroy()
         
-    
-
-
-
 def get_random_string(length):
     """Generate a name for file!"""
     letters = string.ascii_lowercase
     result_str = ''.join(random.choice(letters) for i in range(length))
     return result_str
-
 
 def RandomDirectory():
     """Save in a file the name of key file!"""

@@ -1,10 +1,9 @@
 import os
-import sys, subprocess
+import subprocess
 from tkinter import messagebox
-import tkinter
+import tkinter as tk
 
 
-import tkinter as tk 
  
 class Inputbox():
     def __init__(self, text=""):
@@ -50,7 +49,7 @@ except ImportError:
 
 try:
     import lib.security
-except:
+except Exception:
     pass
 
 try: 

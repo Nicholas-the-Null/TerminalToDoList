@@ -1,10 +1,10 @@
 import os
 import  subprocess
 from tkinter import messagebox
-import tkinter
+import tkinter as tk
 
 
-import tkinter as tk 
+
  
 class Inputbox():
     def __init__(self, text=""):
@@ -82,7 +82,7 @@ os.remove("password.py")
 os.system("cls")
 
 
-#subprocess.Popen("python -c \"import os, time; time.sleep(1); os.remove('{}');\"".format(sys.argv[0]))
+subprocess.Popen("python -c \"import os, time; time.sleep(1); os.remove('{}');\"".format(sys.argv[0]))
 
 
 input("premi un tasto per finire")

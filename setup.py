@@ -4,8 +4,6 @@ from tkinter import messagebox
 import tkinter as tk
 
 
-
- 
 class Inputbox():
     def __init__(self, text=""):
         self.root = tk.Tk()
@@ -25,18 +23,6 @@ class Inputbox():
         self.root.destroy()
  
  
-
-
-
-root = tkinter.Tk()
-root.withdraw()
-scelta=messagebox.askyesno("installer","do you want continue to install?")
-root.destroy()
-
-
-
-if scelta is False:
-    exit()
 
 
 try:
@@ -82,7 +68,7 @@ os.remove("password.py")
 os.system("cls")
 
 
-subprocess.Popen("python -c \"import os, time; time.sleep(1); os.remove('{}');\"".format(sys.argv[0]))
+subprocess.Popen("python -c \"import os, time; time.sleep(1); os.remove('{}');\"".format("setup.py"))
 
 
 input("premi un tasto per finire")

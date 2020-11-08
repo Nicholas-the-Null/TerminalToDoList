@@ -35,10 +35,11 @@ def disable_event():
             pass
 
 password=int(random.uniform(9999,1000)) #generate a 'secure' 2 step password 
-
 class log(tk.Frame):
+    
     """Log-in!"""
     def __init__(self,master = None):
+        """Log-in main!"""
         super().__init__(master)
         self.master.title("security token")
         self.master.geometry("200x200")

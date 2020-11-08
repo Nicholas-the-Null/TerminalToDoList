@@ -37,10 +37,8 @@ password=int(random.uniform(9999,1000)) #generate a 'secure' 2 step password
 class log(tk.Frame):
     '''
     The log object contains method for do a secure login
-    
     Args 
     password
-    
     Return 
     2 step password
     '''

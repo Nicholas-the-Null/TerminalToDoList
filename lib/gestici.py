@@ -7,7 +7,7 @@ import tkinter
 
 
 def auto_elimina_progetti_vuoti():
-    """delete empty file in a directory!"""
+    """Delete empty file in a directory!"""
     logga=""
     number_element=0
     elementi=[]
@@ -28,7 +28,6 @@ def auto_elimina_progetti_vuoti():
         root.withdraw()
         messagebox.showinfo("avviso","non ci sono file")
         root.destroy()
-        pass
 
     else:
         print("ci sono " + str(len(elementi))+" elementi da eliminare")
@@ -38,7 +37,7 @@ def auto_elimina_progetti_vuoti():
             try:
                 scelta=int(input("1-eliminare tutti\n2-non eliminare\n3-scegli\n4-lista\n"))
 
-            except ValueError or UnicodeEncodeError:
+            except ValueError:
                 root = tkinter.Tk()
                 root.withdraw()
                 messagebox.showwarning("avviso","hai selezionato una stringa o qualche valore strano che non sia "+
@@ -51,7 +50,7 @@ def auto_elimina_progetti_vuoti():
                     try:
                         os.remove(x)
                         number_element+=1
-                    except:
+                    except Exception:
                         logga="error"
                         root = tkinter.Tk()
                         root.withdraw()
@@ -85,13 +84,11 @@ def auto_elimina_progetti_vuoti():
                 scelta=input("vuoi uscire da questa funzione y/n").lower().strip()
                 if scelta!="y":
                     break
-            
             else:
                 print("numero non valido")
     
     if number_element == 0 and logga=="":
         logga="non ci sono elementi da eliminare"
-        
     if logga=="" and number_element!=0:
         logga="eliminati con successo tutti i "+str(number_element)  
     else:
@@ -102,7 +99,7 @@ def auto_elimina_progetti_vuoti():
 
                     
 def Elimina_File_Duplicate():
-    """delete duplicate file in a directory!"""
+    """Delete duplicate file in a directory!"""
     logga=""
     hasha=[]
     number_element=0
@@ -147,7 +144,6 @@ def Elimina_File_Duplicate():
 
     else: 
         logga="nessun file eliminato operazione annulata"
-    
     return logga
 
              
@@ -157,7 +153,7 @@ def Elimina_File_Duplicate():
 
 
 def Elimina_pattern(file,Pattern="Completo") -> str:
-    """delete lines by pattern in a file!"""
+    """Delete lines by pattern in a file!"""
     logga=""
     ida=0
     numero_righe_eliminate=0
@@ -184,7 +180,7 @@ def Elimina_pattern(file,Pattern="Completo") -> str:
                 new_file.write(line)
             new_file.close()
 
-    except Exception as e:
+    except Exception:
         logga="error file not found"
 
     if logga!="error":

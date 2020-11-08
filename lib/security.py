@@ -48,7 +48,6 @@ class log(tk.Frame):
         self.crea_widgets()
 
     def crea_widgets(self):
-        
         self.lblPasswords = tk.Label(self, text = "master-password")
         self.lblPasswords.grid(row = 1, column = 0, sticky = tk.W)
         self.vPasswords = tk.StringVar()

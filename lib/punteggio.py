@@ -1,12 +1,11 @@
 import os
 from tkinter import messagebox as mb
-import pathlib as Path
 import tkinter
 
 
 
 def ordina(file=None):
-    """order points in a file! """
+    """Order points in a file! """
     if file == "\n" or file == "" or file == " " or os.path.exists(file) is False or os.path.isfile(file) is False:
         root = tkinter.Tk()
         root.withdraw()
@@ -41,7 +40,7 @@ def ordina(file=None):
 
 
 def Calcola():
-    """Calcolate point of task"""
+    """Calcolate point of task!"""
     esci=False
     while esci is False:
         try:
@@ -102,6 +101,4 @@ def Calcola():
             root.destroy()
 
     punteggio=250-DeadLine-livello-difficolta
-    return punteggio
-            
-
+    return punteggio       

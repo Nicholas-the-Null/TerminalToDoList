@@ -33,12 +33,17 @@ def disable_event():
             exit(1)
         else:
             pass
-
 password=int(random.uniform(9999,1000)) #generate a 'secure' 2 step password 
 class log(tk.Frame):
-    """
-    Log-in! 
-    """
+    '''
+    The log object contains method for do a secure login
+    
+    Args 
+    password
+    
+    Return 
+    2 step password
+    '''
     def __init__(self,master = None):
         """Log-in main!"""
         super().__init__(master)

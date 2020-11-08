@@ -1,10 +1,10 @@
 import os
 import  subprocess
-from tkinter import messagebox
 import tkinter as tk
 
 
 class Inputbox():
+    '''password'''
     def __init__(self, text=""):
         self.root = tk.Tk()
         self.get = ""

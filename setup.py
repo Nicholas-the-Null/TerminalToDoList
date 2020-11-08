@@ -4,6 +4,7 @@ import tkinter as tk
 
 
 class Inputbox():
+    
     '''password'''
     def __init__(self, text=""):
         self.root = tk.Tk()
@@ -17,6 +18,7 @@ class Inputbox():
         self.entry.focus()
         self.entry.bind("<Return>", lambda x: self.getinput(self.entry.get()))
         self.root.mainloop()
+        
  
     def getinput(self, value):
         self.get = value

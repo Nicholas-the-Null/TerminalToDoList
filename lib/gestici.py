@@ -68,7 +68,7 @@ def auto_elimina_progetti_vuoti():
                         try:
                             os.remove(x)
                             number_element+=1
-                        except:
+                        except Exception:
                             logga="error"
                             root = tkinter.Tk()
                             root.withdraw()
@@ -86,7 +86,6 @@ def auto_elimina_progetti_vuoti():
                     break
             else:
                 print("numero non valido")
-    
     if number_element == 0 and logga=="":
         logga="non ci sono elementi da eliminare"
     if logga=="" and number_element!=0:
@@ -141,7 +140,6 @@ def Elimina_File_Duplicate():
         else:
 
             logga="error "+str(totale-number_element)+ " possibili file non sono stati eliminati"
-
     else: 
         logga="nessun file eliminato operazione annulata"
     return logga
